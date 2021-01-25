@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Kavish">
+	<meta name="description" content="Personal blog by Kavish #kid #python #programming">
+	<meta name="google-signin-client_id" content="556589551400-g7qd8p1isluatd63k1890ogj6hrn2ekq.apps.googleusercontent.com">
+	<title>Cyber Bullying : {{ page.title }}</title>
+
+	<link rel="icon" href="/static/favicon.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="/static/normalize.css">
+	<link rel="stylesheet" href="/static/milligram.min.css">
+	<link rel="stylesheet" href="/static/main.css">
+	<link rel="stylesheet" href="/static/default.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180267057-1"></script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-180267057-1');
+	</script> 
+
+	<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> 
+	</script> -->
+
+</head>
+
+<body>
+	<main class="wrapper">
+
+		<nav class="navigation">
+			<section class="container">
+				<a class="navigation-title" style="width:24px;" href="/">
+					<img src="/static/favicon.png" alt="" width="24px">
+
+
+					<h1 class="title">Kavish's Blog  </h1>
+				</a>
+			</section>
+		</nav>
+		<br>
+		<section class="container" id="mdcontent">
+			
+			<h1 id="about">{{ page.title }}</h1>
+{{ content }}
+		</section>
+
+		<footer class="footer">
+			<section class="container">
+			</section>
+		</footer>
+
+	</main>
+	<!-- <script src="https://milligram.io/scripts/main.js"></script> -->
+	<!-- <script src="/static/main.js"></script> -->
+</body>
+
+</html>
