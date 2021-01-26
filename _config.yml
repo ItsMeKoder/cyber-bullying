@@ -8,8 +8,11 @@ url: "https://kavish.sendildevar.in/" # the base hostname & protocol for your si
 
 
 collections:
-  cyber-bullying:
+  pages:
     output: true
+  chat:
+    output: true
+
 
 exclude:
   - bower_components
