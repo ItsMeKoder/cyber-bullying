@@ -19,22 +19,28 @@ function output(input) {
     .replace(/whats/g, "what is")
     .replace(/please /g, "")
     .replace(/ please/g, "")
-    .replace(/r u/g, "are you");
+    .replace(/r u/g, "are you")
+    .replace(/"?"/g, "")
+    .replace(/"i'am"/, "i am")
+    .replace(/don't/,"do not");
 
   if (compare(prompts, replies, text)) { 
     
     product = compare(prompts, replies, text);
+    addChat(input, product);
+
   } else if (text.match(/thank/gi)) {
     product = "You're welcome!"
+    addChat(input,product)
   } else if (text.match(/(corona|covid|virus)/gi)) {
-    
+    addChat(input,product)
     product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
   } else {
-    product = alternative[Math.floor(Math.random() * alternative.length)];
+    product = alternative[0];
+    addChat(input,product,true)
   }
 
 
-  addChat(input, product);
 }
 
 function compare(promptsArray, repliesArray, string) {
@@ -43,6 +49,7 @@ function compare(promptsArray, repliesArray, string) {
   for (let x = 0; x < promptsArray.length; x++) {
     for (let y = 0; y < promptsArray[x].length; y++) {
       if (promptsArray[x][y] === string) {
+        console.info("Reply has been found for the asked question")
         let replies = repliesArray[x];
         reply = replies[Math.floor(Math.random() * replies.length)];
         replyFound = true;
@@ -58,7 +65,7 @@ function compare(promptsArray, repliesArray, string) {
   return reply;
 }
 
-function addChat(input, product) {
+function addChat(input, product,googlesearch=false) {
   const messagesContainer = document.getElementById("messages");
 
   let userDiv = document.createElement("div");
@@ -82,11 +89,27 @@ function addChat(input, product) {
   
   messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
 
-  
-  setTimeout(() => {
-    botText.innerText = `${product}`;
-    // textToSpeech(product)
-  }, 2000
-  )
+  if (`${googlesearch}` === "true"){
+    console.info(`${googlesearch}`)
+    setTimeout(() => {
+      botText.innerText = `${product}`;
+      let gsearch=document.createElement("iframe");
+      gsearch.className= "bot response";
+      gsearch.src = "https://google.com/search?igu=1&ei=&q="+`${input}`
+      gsearch.width="900px"
+      gsearch.height="900px"
+      document.getElementById("messages").appendChild(gsearch)
+      
+      textToSpeech(product)
+    }, 2000
+    )
+  }
+  else{
+    setTimeout(() => {
+      botText.innerText = `${product}`;
+      textToSpeech(product)
+    }, 2000
+    )
+  }
 
 }
