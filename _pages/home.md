@@ -6,7 +6,7 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 <!-- ## ECHO: Edifying CyberSpace Harassment Outreach -->
 
-![ECHO Image](/img/ECHO.png)
+![ECHO Image](/cyber-bullying/img/ECHO.png)
 
 ## Pages
 > [Pages](/cyber-bullying/pages/)  
