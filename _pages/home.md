@@ -13,6 +13,4 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 ## Contact
 
-Have Some other Questions?
-
-Click [here](/cyber-bullying/chat) to chat :
+> Click [here](/cyber-bullying/chat) to chat :
