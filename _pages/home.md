@@ -12,7 +12,7 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 > [Pages](/cyber-bullying/pages/)  
 
 ## What is Cyber Bullying?
-> [Chat](/cyber-bullying/pages/What is Cyber Bullying?)
+> [What is Cyber Bullying](/cyber-bullying/pages/What is Cyber Bullying?)
 
 ## Contact
 
