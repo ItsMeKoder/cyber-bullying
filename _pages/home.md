@@ -13,4 +13,4 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 ## Contact
 
-> Click [here](/cyber-bullying/chat) to chat :
+> [Chat here](/cyber-bullying/chat)
