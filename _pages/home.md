@@ -8,9 +8,6 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 ![ECHO Image](/cyber-bullying/img/ECHO.png)
 
-## Pages
-> [Pages](/cyber-bullying/pages/)  
-
 ## What is Cyber Bullying?
 > [What is Cyber Bullying](/cyber-bullying/pages/What is Cyber Bullying?)
 
