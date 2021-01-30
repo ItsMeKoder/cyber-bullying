@@ -1,18 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const inputField = document.getElementById("input");
-  inputField.addEventListener("keydown", (e) => {
-    if (e.code === "Enter") {
-      let input = inputField.value;
-      inputField.value = "";
-      output(input);
-    }
-  });
+function submit(){
+  inputField = document.getElementById("inForm");
+  // let str = inputField.value;
+  // console.log(str)
+  output();
+  // inputField.value = "";
+}
+document.getElementById("inForm").addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    output(submit);    
+  }
 });
 
-function output(input) {
-  let product;
 
-  let txt = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
+// function resize(){
+  // chatDiv=document.getElementById("frame")
+  // console.info(chatDiv)
+// }
+
+function testMobile() {
+  const toMatch = [
+      /Android/i,
+      /webOS/i,
+      /iPhone/i,
+      /iPad/i,
+      /iPod/i,
+      /BlackBerry/i,
+      /Windows Phone/i
+  ];
+
+  return toMatch.some((toMatchItem) => {
+      return navigator.userAgent.match(toMatchItem);
+  });
+}
+
+
+function getinForm(){
+  field= document.getElementById("inForm");
+  setTimeout(function resetVal(){field.value=""},1)
+  return field.value;
+  // feild.value="";
+}
+function output() {
+  let product;
+  input=getinForm()
+  // console.log("str from func  "+str);
+  // console.info(str.text)
+  console.info(typeof(input))
+
+  txt = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
   text = txt
     .replace(/ a /g, " ")
     .replace(/i feel /g, "")
@@ -23,7 +58,7 @@ function output(input) {
     .replace(/"?"/g, "")
     .replace(/"i'am"/, "i am")
     .replace(/don't/,"do not");
-
+  console.info(text)
   if (compare(prompts, replies, text)) { 
     
     product = compare(prompts, replies, text);
@@ -49,7 +84,7 @@ function compare(promptsArray, repliesArray, string) {
   for (let x = 0; x < promptsArray.length; x++) {
     for (let y = 0; y < promptsArray[x].length; y++) {
       if (promptsArray[x][y] === string) {
-        console.info("Reply has been found for the asked question")
+        // console.info("Reply has been found for the asked question")
         let replies = repliesArray[x];
         reply = replies[Math.floor(Math.random() * replies.length)];
         replyFound = true;
@@ -100,14 +135,14 @@ function addChat(input, product,googlesearch=false) {
       gsearch.height="900px"
       document.getElementById("messages").appendChild(gsearch)
       
-      textToSpeech(product)
+      // textToSpeech(product)
     }, 2000
     )
   }
   else{
     setTimeout(() => {
       botText.innerText = `${product}`;
-      textToSpeech(product)
+      // textToSpeech(product)
     }, 2000
     )
   }

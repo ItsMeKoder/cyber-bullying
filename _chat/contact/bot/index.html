@@ -1,32 +1,88 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-	<title>Chatbot</title>
-	<link rel="icon" href="/cyber-bullying/static/bot.png" />
-	<link rel="stylesheet" href="/cyber-bullying/static/style_bot.css" />
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Kavish">
+	<meta name="description" content="Personal blog by Kavish #kid #python #programming">
+	<meta name="google-signin-client_id"
+		content="556589551400-g7qd8p1isluatd63k1890ogj6hrn2ekq.apps.googleusercontent.com">
+	<title>Cyber Bullying : Chat</title>
+
+	<link rel="icon" href="/static/favicon.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="/static/normalize.css">
+	<link rel="stylesheet" href="/static/milligram.min.css">
+	<link rel="stylesheet" href="/static/main.css">
+	<link rel="stylesheet" href="/static/default.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180267057-1"></script>
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-180267057-1');
+	</script>
+
+	<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> 
+		</script> -->
+	<link rel="icon" href="/static/bot.png" />
+	<link rel="stylesheet" href="/static/style_bot.css" />
 </head>
 
-<body>
-	<div id="container" class="container" >
-		<div id="chat" class="chat" style="width: fit-content;height: 1000px;width: 950px;">
-			<div id="messages" class="messages"></div>
-			<input id="input" type="text" placeholder="Say something..." autocomplete="on" autofocus="true" />
-		</div>
-		<!-- <img src="/cyber-bullying/static/bot.png" alt="Robot cartoon" height="500vh"> -->
-	</div>
-</body>
-<!-- <script>
-	const prompts=[["Am"]]
-	const replies=[["YES?"]]
-	const alternative=[["Oops. I don't know!"]]
-	// const prompts=[["Hi","Hello"],["Ho","HOO"]]
-	// const replies=[["Hi","Hello"],["Ho","HOO"]]
-	// const alternative=[["Hi","Hello"],["Ho","HOO"]]
+<!-- 
+<head>
+	<title>Chatbot</title>
+	<link rel="icon" href="/static/bot.png" />
+	<link rel="stylesheet" href="/static/style_bot.css" />
 	
-</script> -->
-<script type="text/javascript" src="/cyber-bullying/static/index.js" ></script>
-<script type="text/javascript" src="/cyber-bullying/static/constants.js" ></script>
-<script type="text/javascript" src="/cyber-bullying/static/speech.js" ></script>
+</head> -->
+
+
+<body>
+	<div id="container" class="container">
+
+
+
+
+
+		<div id="chat" class="chat">
+			<div id="messages" class="messages">
+				<!-- Content will be added -->
+			</div>
+
+
+			<!-- <div class="row"> -->
+				<!-- <form> -->
+					<input id="inForm" type="text" placeholder="Say something..." autocomplete="on" autofocus="true" />
+					<button class="button" , onclick="submit()">Send</img></button>
+				<!-- </form> -->
+			<!-- </div> -->
+
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript" src="/static/index.js"></script>
+<script type="text/javascript" src="/static/constants.js"></script>
+<script type="text/javascript" src="/static/speech.js"></script>
 
 </html>
