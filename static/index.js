@@ -105,7 +105,7 @@ function addChat(input, product,googlesearch=false) {
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.className = "user response";
-  userDiv.innerHTML = `<img src="/static/user.png" class="avatar"><span>${input}</span>`;
+  userDiv.innerHTML = `<img src="/cyber-bullying/static/user.png" class="avatar"><span>${input}</span>`;
   
   messagesContainer.appendChild(userDiv);
 
@@ -113,7 +113,7 @@ function addChat(input, product,googlesearch=false) {
   let botImg = document.createElement("img");
   let botText = document.createElement("span");
   botDiv.id = "bot";
-  botImg.src = "/static/bot-mini.png";
+  botImg.src = "/cyber-bullying/static/bot-mini.png";
   botImg.className = "avatar";
   botDiv.className = "bot response";
   botText.innerText = "Typing...";
