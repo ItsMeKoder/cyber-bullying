@@ -54,11 +54,11 @@ const prompts = [
   ],
   ["internet companies do not seem to care about online bullying and harassment. are they being held responsible"],
   [
-    "are there any online anti-bullying tools for children or young people",
-    "are there any online anti-bullying tools for children and young people",
-    "is there any online anti-bullying tools for us",
-    "are there any online anti-bullying tools for young people",
-    "are there any online anti-bullying tools for children"
+    "are there any online antibullying tools for children or young people",
+    "are there any online antibullying tools for children and young people",
+    "is there any online antibullying tools for us",
+    "are there any online antibullying tools for young people",
+    "are there any online antibullying tools for children"
   ],
   ["what is harassment"],
   ["where can i obtain additional information for preventing cyber bullying","where can i obtain additional information for preventing cyber bullying"]
@@ -101,7 +101,7 @@ const replies = [
 // Random for any other user input
 
 const alternative = [
-  "Sorry I didn't understand but here's a answer from google : \n"
+  "Sorry I didn't understand but here's a answer from google\n"
   // "Same",
   // "Go on...",
   // "Bro...",

@@ -49,7 +49,6 @@ function output() {
 
   txt = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
   text = txt
-    .replace(/ a /g, " ")
     .replace(/i feel /g, "")
     .replace(/whats/g, "what is")
     .replace(/please /g, "")
@@ -58,7 +57,7 @@ function output() {
     .replace(/"?"/g, "")
     .replace(/"i'am"/, "i am")
     .replace(/don't/,"do not");
-  console.info(text)
+  console.info("Cleaned Query is",text);
   if (compare(prompts, replies, text)) { 
     
     product = compare(prompts, replies, text);
@@ -78,22 +77,22 @@ function output() {
 
 }
 
-function compare(promptsArray, repliesArray, string) {
+function compare(promptsArray, repliesArray, str) {
   let reply;
   let replyFound = false;
   for (let x = 0; x < promptsArray.length; x++) {
+    console.log("NOw looking into x=",x,promptsArray[x]);
     for (let y = 0; y < promptsArray[x].length; y++) {
-      if (promptsArray[x][y] === string) {
+      console.log("NOw looking into y=",y,promptsArray[x].length, "looking for ",promptsArray[x][y],"Q=",str );
+      if (promptsArray[x][y].toLowerCase() === str) {
         // console.info("Reply has been found for the asked question")
         let replies = repliesArray[x];
         reply = replies[Math.floor(Math.random() * replies.length)];
         replyFound = true;
-
         break;
       }
     }
     if (replyFound) {
-
       break;
     }
   }
@@ -128,13 +127,7 @@ function addChat(input, product,googlesearch=false) {
     console.info(`${googlesearch}`)
     setTimeout(() => {
       botText.innerText = `${product}`;
-      let gsearch=document.createElement("iframe");
-      gsearch.className= "bot response";
-      gsearch.src = "https://google.com/search?igu=1&ei=&q="+`${input}`
-      gsearch.width="900px"
-      gsearch.height="900px"
-      document.getElementById("messages").appendChild(gsearch)
-      
+      window.open("https://google.com/search?igu=1&ei=&q="+`${input}`);
       // textToSpeech(product)
     }, 2000
     )
