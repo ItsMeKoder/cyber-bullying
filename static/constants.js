@@ -67,7 +67,7 @@ const prompts = [
 // Possible responses, in corresponding order
 
 const replies = [
-  ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"],
+  ["Hello!", "Hi!", "Hey!", "Hi there!"],
   [
     "Great",
     "Pretty well",
