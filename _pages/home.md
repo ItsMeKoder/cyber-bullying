@@ -21,6 +21,7 @@ It is an ongoing and deliberate misuse of power in relationships used to harm ot
 Now let's know about <strong>Cyber Bullying</strong>
 
 What is it?  
+<br>
 Cyberbullying is bullying with the use of digital technologies and platforms like social media, messaging platforms, gaming platforms and mobile phones.  
 It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted. Examples include:
 
