@@ -128,14 +128,14 @@ function addChat(input, product,googlesearch=false) {
     setTimeout(() => {
       botText.innerText = `${product}`;
       window.open("https://google.com/search?igu=1&ei=&q="+`${input}`);
-      // textToSpeech(product)
+      textToSpeech(product)
     }, 2000
     )
   }
   else{
     setTimeout(() => {
       botText.innerText = `${product}`;
-      // textToSpeech(product)
+      textToSpeech(product)
     }, 2000
     )
   }
