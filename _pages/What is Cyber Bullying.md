@@ -9,9 +9,9 @@ title: "What is Cyber Bullying?"
 
 ## What is it?
 
-### Simple Answer :<strong> Bullying is to harm someone</strong>
+Simple Answer :<strong> Bullying is to harm someone</strong>
 
-### Detail Answer : 
+Detail Answer : 
 
 It is an ongoing and deliberate misuse of power in relationships used to harm others via verbal or physical means, which can mentally or physically harm the victim
 
