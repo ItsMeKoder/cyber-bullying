@@ -8,8 +8,6 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 ![ECHO Image](/cyber-bullying/img/ECHO.png)
 
-## What is Cyber Bullying?
-
 # What is Cyber bullying?
 
 First of all, let's get to know about bullying
