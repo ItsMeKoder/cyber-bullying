@@ -17,8 +17,4 @@ Now let's know about <strong>Cyber Bullying</strong>
 
 What is it?  
 Cyberbullying is bullying with the use of digital technologies and platforms like social media, messaging platforms, gaming platforms and mobile phones.  
-It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted. Examples include:
-
-> 1. Spreading lies about or posting photos of someone on social media.  
-> 2. Sending hurtful messages or threats via messaging platforms.  
-> 3. Impersonating someone and sending mean messages to others on their behalf. 
+It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted.
