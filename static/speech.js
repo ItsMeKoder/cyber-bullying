@@ -1,5 +1,3 @@
-// Text to Speech
-
 const synth = window.speechSynthesis;
 
 const textToSpeech = (string) => {

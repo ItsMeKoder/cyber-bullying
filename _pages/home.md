@@ -29,6 +29,6 @@ It is repeated behaviour, aimed at scaring, angering or shaming those who are ta
 > 2. Sending hurtful messages or threats via messaging platforms.  
 > 3. Impersonating someone and sending mean messages to others on their behalf. 
 
-## Contact
+## Converse here
 
-> [Chat here](/cyber-bullying/chat)
+> [ECHO BOT](/cyber-bullying/chat)
