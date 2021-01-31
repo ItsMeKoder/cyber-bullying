@@ -27,6 +27,5 @@ It is repeated behaviour, aimed at scaring, angering or shaming those who are ta
 
 # <strong>Converse here</strong>
 
-# [ECHO BOT](/cyber-bullying/chat)  
-
+# [ECHO BOT](/cyber-bullying/chat)
 ![BOT IMAGE](/cyber-bullying/static/bot-mini.png)
