@@ -28,4 +28,4 @@ It is repeated behaviour, aimed at scaring, angering or shaming those who are ta
 # <strong>Converse here</strong>
 
 # [ECHO BOT](/cyber-bullying/chat)
-<img src='/cyber-bullying/static/bot-mini.png' style="width: 50%; height: 50%;">
+<img src='/cyber-bullying/static/bot-mini.png' style="width: 200px; height: 197px;">
