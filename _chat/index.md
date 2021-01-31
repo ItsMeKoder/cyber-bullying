@@ -7,5 +7,5 @@ title: "Chat"
 
 Get Chating over there 👉🏼
 <iframe src="/cyber-bullying/chat/contact/bot"
-    style="width: 1000px;height: 1000px;box-shadow: 0 10px 10px rgba(0,0,0,.6);border-radius: 5px;overflow: hidden;border: none;"
+    style="width: auto;height: auto;min-width: 100px;box-shadow: 0 10px 10px rgba(0,0,0,.6);border-radius: 5px;overflow: hidden;border: none;"
     align="right" id="frame"></iframe>
