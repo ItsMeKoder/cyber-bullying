@@ -26,7 +26,7 @@ Cyberbullying is bullying with the use of digital technologies and platforms lik
 It is repeated behaviour, aimed at scaring, angering or shaming those who are targeted.
 
 # <strong>Converse here</strong>
-
-# [ECHO BOT](/chat)  
-
-![BOT IMAGE](/static/bot-mini.png)
+ 
+# [ECHO BOT](/cyber-bullying/chat)
+<img src='/cyber-bullying/static/bot-mini.png' style="width: 200px; height: 197px;">
+ 

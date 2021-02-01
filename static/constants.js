@@ -99,8 +99,6 @@ const promptsSingle = [
 
 const replies = [
   ["Hello!", "Hi!", "Hey!", "Hi there!"],
-  ["Hello!", "Hi!", "Hey!", "Hi there!"],
-  ["Hello!", "Hi!", "Hey!", "Hi there!"],
   [
     "Great",
     "Pretty well",
