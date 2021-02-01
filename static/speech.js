@@ -1,6 +1,9 @@
 const synth = window.speechSynthesis;
 
-const textToSpeech = (string) => {
+const textToSpeech = (string,toSpeak=false) => {
+  if (!toSpeak){
+    return
+  }
   let voice = new SpeechSynthesisUtterance(string);
   voice.text = string;
   voice.lang = "en-US";

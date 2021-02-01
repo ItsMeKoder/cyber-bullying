@@ -3,7 +3,7 @@ title: Kavish Blog
 email: 
 description: > # this means to ignore newlines until "baseurl:"
 # Digital portal for my personal blogs and posts
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "/cyber-bullying/" # the subpath of your site, e.g. /blog/
 url: "https://kavish.sendildevar.in/" # the base hostname & protocol for your site
 
 

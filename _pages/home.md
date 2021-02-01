@@ -6,7 +6,7 @@ title: "Home Page : ECHO – Edifying CyberSpace Harassment Outreach"
 
 <!-- ## ECHO: Edifying CyberSpace Harassment Outreach -->
 
-![ECHO Image](/cyber-bullying/img/ECHO.png)
+![ECHO Image](/img/ECHO.png)
 
 # What is Cyber bullying?
 
@@ -27,6 +27,6 @@ It is repeated behaviour, aimed at scaring, angering or shaming those who are ta
 
 # <strong>Converse here</strong>
 
-# [ECHO BOT](/cyber-bullying/chat)  
+# [ECHO BOT](/chat)  
 
-![BOT IMAGE](/cyber-bullying/static/bot-mini.png)
+![BOT IMAGE](/static/bot-mini.png)

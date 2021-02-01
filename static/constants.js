@@ -61,13 +61,46 @@ const prompts = [
     "are there any online antibullying tools for children"
   ],
   ["what is harassment"],
-  ["where can i obtain additional information for preventing cyber bullying","where can i obtain additional information for preventing cyber bullying"]
+  ["where can i obtain additional information for preventing cyber bullying", "where can i obtain additional information for preventing cyber bullying"],
+  ["ok", "okay", "k"]
 ]
+
+
+const promptsSingle = [
+  "hi",
+  "hello",
+  "hey",
+  "how are you",
+  "what are you doing",
+  "how old are you",
+  "who are you",
+  "your name please",
+  "bye",
+  "what should i eat today",
+  "am i being bullied online how do you tell the difference between a joke and bullying",
+  "how do you tell the difference between a joke and bullying", "am i being bullied online",
+  "what are the effects of cyber bullying",
+  "who should I talk to if someone is bullying me online why is reporting important",
+  "i am experiencing cyberbullying, but i am afraid to talk to my parents about it. how can i approach them",
+  "how can i help my friends report a case of cyberbullying especially if they don’t want to do it",
+  "how do we stop cyberbullying without giving up access to the Internet",
+  "how do i prevent my personal information from being used to manipulate or humiliate me on social media",
+  "is there a punishment for cyberbullying",
+  "internet companies do not seem to care about online bullying and harassment. are they being held responsible",
+  "are there any online antibullying tools for children or young people",
+  "what is harassment",
+  "where can i obtain additional information for preventing cyber bullying",
+  "ok",
+  "what is cyber bullying"
+]
+
 
 // Possible responses, in corresponding order
 
 const replies = [
-  ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"],
+  ["Hello!", "Hi!", "Hey!", "Hi there!"],
+  ["Hello!", "Hi!", "Hey!", "Hi there!"],
+  ["Hello!", "Hi!", "Hey!", "Hi there!"],
   [
     "Great",
     "Pretty well",
@@ -81,7 +114,6 @@ const replies = [
   ["I can be named anything"],
   ["Bye", "Goodbye", "See you later"],
   ["Sushi", "Pizza", "Burger"],
-  ["Please say something :("],
   ["Thats, not sure but, I fortunately,can answer your second question : All friends joke around with each other, but sometimes it’s hard to tell if someone is just having fun or trying to hurt you, especially online. Sometimes they’ll laugh it off with a “just kidding,” or “don’t take it so seriously.”   \n But if you feel hurt or think others are laughing at you instead of with you, then the joke has gone too far. If it continues even after you’ve asked the person to stop and you are still feeling upset about it, then this could be bullying.\n And when the bullying takes place online, it can result in unwanted attention from a wide range of people including strangers. Wherever it may happen, if you are not happy about it, you should not have to stand for it.\n Call it what you will – if you feel bad and it doesn’t stop, then it’s worth getting help. Stopping cyberbullying is not just about calling out bullies, it’s also about recognizing that everyone deserves respect – online and in real life."],
   ["All friends joke around with each other, but sometimes it’s hard to tell if someone is just having fun or trying to hurt you, especially online. Sometimes they’ll laugh it off with a “just kidding,” or “don’t take it so seriously.”   \n But if you feel hurt or think others are laughing at you instead of with you, then the joke has gone too far. If it continues even after you’ve asked the person to stop and you are still feeling upset about it, then this could be bullying.\n And when the bullying takes place online, it can result in unwanted attention from a wide range of people including strangers. Wherever it may happen, if you are not happy about it, you should not have to stand for it.\n Call it what you will – if you feel bad and it doesn’t stop, then it’s worth getting help. Stopping cyberbullying is not just about calling out bullies, it’s also about recognizing that everyone deserves respect – online and in real life."],
   ["It's hard to tell but You can ask/tell me 'The difference between joke and bullying'"],
@@ -95,7 +127,9 @@ const replies = [
   ["Internet companies are increasingly paying attention to the issue of online bullying.\nMany of them are introducing ways to address it and better protect their users with new tools, guidance and ways to report online abuse.\nBut it is true that even more is needed. Many young people experience cyberbullying every day. Some face extreme forms of online abuse. Some have taken their own lives as a result.\nTechnology companies have a responsibility to protect their users especially children and young people.\nIt is up to all of us to hold them accountable when they’re not living up to these responsibilities."],
   ["Each social platform offers different tools (see available ones below) that allow you to restrict who can comment on or view your posts or who can connect automatically as a friend, and to report cases of bullying. Many of them involve simple steps to block, mute or report cyberbullying. We encourage you to explore them.\nSocial media companies also provide educational tools and guidance for children, parents and teachers to learn about risks and ways to stay safe online.  \nAlso, the first line of defense against cyberbullying could be you. Think about where cyberbullying happens in your community and ways you can help – by raising your voice, calling out bullies, reaching out to trusted adults or by creating awareness of the issue. Even a simple act of kindness can go a long way.  \nIf you are worried about your safety or something that has happened to you online, urgently speak to an adult you trust. Many countries have a special helpline you can call for free and talk to someone anonymously. Visit childhelplineinternational.org to find help in your country."],
   ["Harassment (also known as cyber harassment) is the use of email, instant messaging, and websites to bully or harass an individual or group through personal attacks. Harassment can be in the form of derogatory or insulting comments made in chat rooms, e-mail, block postings or comments on social networking sites. Those responsible for harassment are often difficult to track as the perpetrator is often anonymous. Harassment is very difficult to verify because we often do not understand the history or context of the situation. For purposes of this FAQ, consider harassment to include communication between adults."],
-  ["Please visit this site for additional useful information about bullying: http://www.microsoft.com/about/corporatecitizenship/en-us/youthspark/youthsparkhub/programs/onlinesafety/\nThere are many web service resources on the World Wide Web you can try, including:\nwww.bullying.org\nhttp://cyberbullying.us\nhttp://www.bullybust.org/resources/key_resources"]
+  ["Please visit this site for additional useful information about bullying: http://www.microsoft.com/about/corporatecitizenship/en-us/youthspark/youthsparkhub/programs/onlinesafety/\nThere are many web service resources on the World Wide Web you can try, including:\nwww.bullying.org\nhttp://cyberbullying.us\nhttp://www.bullybust.org/resources/key_resources"],
+  ["Okay", "OK"],
+  ["Cyberbullying is bullying with the use of digital technologies and platforms like social media, messaging platforms, gaming platforms and mobile phones.\nIt is repeated behaviour, aimed at scaring, angering or shaming those who are targeted."]
 ]
 
 // Random for any other user input

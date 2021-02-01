@@ -40,6 +40,9 @@ function getinForm(){
   return field.value;
   // feild.value="";
 }
+
+
+
 function output() {
   let product;
   input=getinForm()
@@ -48,64 +51,97 @@ function output() {
   console.info(typeof(input))
 
   txt = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
-  text = txt
-    .replace(/i feel /g, "")
-    .replace(/whats/g, "what is")
-    .replace(/please /g, "")
-    .replace(/ please/g, "")
-    .replace(/r u/g, "are you")
-    .replace(/"?"/g, "")
-    .replace(/"i'am"/, "i am")
-    .replace(/don't/,"do not");
-  console.info("Cleaned Query is",text);
-  if (compare(prompts, replies, text)) { 
-    
-    product = compare(prompts, replies, text);
-    addChat(input, product);
 
-  } else if (text.match(/thank/gi)) {
-    product = "You're welcome!"
-    addChat(input,product)
-  } else if (text.match(/(corona|covid|virus)/gi)) {
-    addChat(input,product)
-    product = coronavirus[Math.floor(Math.random() * coronavirus.length)];
-  } else {
-    product = alternative[0];
-    addChat(input,product,true)
+  if (txt===""){
+     
+  addChat(input, "Say Something",true);
+  return;
   }
+  // text = txt
+  //   .replace(/i feel /g, "")
+  //   .replace(/whats/g, "what is")
+  //   .replace(/please /g, "")
+  //   .replace(/ please/g, "")
+  //   .replace(/r u/g, "are you")
+  //   .replace(/"?"/g, "")
+  //   .replace(/"i'am"/, "i am")
+  //   .replace(/don't/,"do not");
+  text=txt;
+  
+  console.info("Cleaned Query is",text);
+  
+  response = compareSingle(promptsSingle, replies, text);
+  product=response[0];
+  spk=response[1];
 
+  addChat(input, product,spk);
 
+   
 }
 
-function compare(promptsArray, repliesArray, str) {
+
+
+function compareSingle(promptsArray, repliesArray, str) {
   let reply;
   let replyFound = false;
-  for (let x = 0; x < promptsArray.length; x++) {
-    console.log("NOw looking into x=",x,promptsArray[x]);
-    for (let y = 0; y < promptsArray[x].length; y++) {
-      console.log("NOw looking into y=",y,promptsArray[x].length, "looking for ",promptsArray[x][y],"Q=",str );
-      if (promptsArray[x][y].toLowerCase() === str) {
-        // console.info("Reply has been found for the asked question")
-        let replies = repliesArray[x];
-        reply = replies[Math.floor(Math.random() * replies.length)];
-        replyFound = true;
-        break;
-      }
-    }
-    if (replyFound) {
-      break;
-    }
+  question=findBestMatch(str,promptsArray);
+  bestmatch=question.bestMatch;
+  console.log(bestmatch);
+  prefix=bestmatch.target;
+  
+  if (bestmatch.rating <= 0.2){
+    prefix="<b>I am not yet confident to reply this !! </b> </br>";
+    reply = prefix+ "<a target=_none href='https://google.com/search?q="+str+"'> Ask Google ?</a>";
+    replyFound=false;
+    return [reply,replyFound];
   }
-  return reply;
+
+  if (bestmatch.rating <= 0.7){
+    console.info("Less confident match ",bestmatch.rating);
+    prefix="Did you mean : "+question.bestMatch.target + "?\n";
+    
+    reply = prefix+repliesArray[question.bestMatchIndex];
+    replyFound=true;
+  }else{
+    console.log(bestmatch);
+  let replies = repliesArray[question.bestMatchIndex];
+  reply = replies[Math.floor(Math.random() * replies.length)];
+  replyFound = true;
+  };
+  return [reply,replyFound];
 }
 
-function addChat(input, product,googlesearch=false) {
+
+// function compare(promptsArray, repliesArray, str) {
+//   let reply;
+//   let replyFound = false;
+//   console.info(findBestMatch(str,promptsArray));
+//   for (let x = 0; x < promptsArray.length; x++) {
+//     console.log("NOw looking into x=",x,promptsArray[x]);
+//     for (let y = 0; y < promptsArray[x].length; y++) {
+//       console.log("NOw looking into y=",y,promptsArray[x].length, "looking for ",promptsArray[x][y],"Q=",str );
+//       if (promptsArray[x][y].toLowerCase() === str) {
+//         // console.info("Reply has been found for the asked question")
+//         let replies = repliesArray[x];
+//         reply = replies[Math.floor(Math.random() * replies.length)];
+//         replyFound = true;
+//         break;
+//       }
+//     }
+//     if (replyFound) {
+//       break;
+//     }
+//   }
+//   return reply;
+// }
+
+function addChat(input, product,speak=false) {
   const messagesContainer = document.getElementById("messages");
 
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.className = "user response";
-  userDiv.innerHTML = `<img src="/cyber-bullying/static/user.png" class="avatar"><span>${input}</span>`;
+  userDiv.innerHTML = `<img src="/static/user.png" class="avatar"><span>${input}</span>`;
   
   messagesContainer.appendChild(userDiv);
 
@@ -113,7 +149,7 @@ function addChat(input, product,googlesearch=false) {
   let botImg = document.createElement("img");
   let botText = document.createElement("span");
   botDiv.id = "bot";
-  botImg.src = "/cyber-bullying/static/bot-mini.png";
+  botImg.src = "/static/bot-mini.png";
   botImg.className = "avatar";
   botDiv.className = "bot response";
   botText.innerText = "Typing...";
@@ -123,21 +159,10 @@ function addChat(input, product,googlesearch=false) {
   
   messagesContainer.scrollTop = messagesContainer.scrollHeight - messagesContainer.clientHeight;
 
-  if (`${googlesearch}` === "true"){
-    console.info(`${googlesearch}`)
-    setTimeout(() => {
-      botText.innerText = `${product}`;
-      window.open("https://google.com/search?igu=1&ei=&q="+`${input}`);
-      textToSpeech(product)
-    }, 2000
-    )
-  }
-  else{
-    setTimeout(() => {
-      botText.innerText = `${product}`;
-      textToSpeech(product)
-    }, 2000
-    )
-  }
-
+ 
+  setTimeout(() => {
+    botText.innerHTML = `${product}`;
+    textToSpeech(product,speak)
+  }, 2000
+  )
 }
