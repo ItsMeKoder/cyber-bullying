@@ -71,6 +71,7 @@ input {
 .bot {
 	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,  
 	monospace;
+	color: white;
 }
 
 .avatar {
@@ -81,6 +82,7 @@ input {
 	display: flex;
 	align-items: center;
 	margin: 1%;
+	color: white;
 }
 
 
